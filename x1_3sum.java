@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_medium;
+package ARRAYS_medium;
 
 import java.util.*;
 /*
@@ -49,8 +49,6 @@ public class x1_3sum {
     int[] nums = new int[] { -1, 0, 1, 2, -1, -4 };
 
     System.out.println(threeSum(nums));
-
-    System.out.println(Practice.threeSum(nums));
   }
 
   public static List<List<Integer>> threeSum(int[] nums) {
@@ -81,47 +79,6 @@ public class x1_3sum {
       }
     }
     return res;
-  }
-
-}
-
-class Practice {
-
-  public static List<List<Integer>> threeSum(int[] nums) {
-    List<List<Integer>> list = new ArrayList<>();
-    if (nums.length < 3)
-      return list;
-
-    Arrays.sort(nums);
-    for (int i = 0; i < nums.length - 2; i++) {
-      if (i == 0 || i > 0 && nums[i] != nums[i - 1]) {
-        int a = -nums[i];
-        int j = i + 1;
-        int k = nums.length - 1;
-
-        while (j < k) {
-          if (nums[j] + nums[k] == a) {
-            list.add(Arrays.asList(nums[i], nums[j], nums[k]));
-            j++;
-            k--;
-
-            while (j < k && nums[j] == nums[j - 1]) {
-              j++;
-            }
-
-            while (j < k && nums[k] == nums[k + 1]) {
-              k--;
-            }
-          } else if (nums[j] + nums[k] > a) {
-            k--;
-          } else {
-            j++;
-          }
-        }
-      }
-    }
-
-    return list;
   }
 
 }

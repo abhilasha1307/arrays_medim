@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_medium;
+package ARRAYS_medium;
 
 /*
 =======================================

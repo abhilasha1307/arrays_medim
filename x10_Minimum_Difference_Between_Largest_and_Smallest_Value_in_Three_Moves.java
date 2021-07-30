@@ -1,4 +1,4 @@
-package ARRAYS.ARRAYS_medium;
+package ARRAYS_medium;
 
 import java.util.Arrays;
 
@@ -40,29 +40,29 @@ public int minDifference(int[] nums) {
 */
 public class x10_Minimum_Difference_Between_Largest_and_Smallest_Value_in_Three_Moves {
 
- public static int minDifference(int[] nums) {
+    public static int minDifference(int[] nums) {
 
-  if (nums.length <= 4) {
-   return 0;
-  }
+        if (nums.length <= 4) {
+            return 0;
+        }
 
-  Arrays.sort(nums);
+        Arrays.sort(nums);
 
-  int min = Integer.MAX_VALUE;
-  int n = nums.length;
+        int min = Integer.MAX_VALUE;
+        int n = nums.length;
 
-  min = Math.min(min, nums[n - 4] - nums[0]);
-  min = Math.min(min, nums[n - 3] - nums[1]);
-  min = Math.min(min, nums[n - 2] - nums[2]);
-  min = Math.min(min, nums[n - 1] - nums[3]);
+        min = Math.min(min, nums[n - 4] - nums[0]);
+        min = Math.min(min, nums[n - 3] - nums[1]);
+        min = Math.min(min, nums[n - 2] - nums[2]);
+        min = Math.min(min, nums[n - 1] - nums[3]);
 
-  return min;
+        return min;
 
- }
+    }
 
- public static void main(String[] args) {
-  int[] arr = new int[] { 6, 6, 0, 1, 1, 4, 6 };
+    public static void main(String[] args) {
+        int[] arr = new int[] { 6, 6, 0, 1, 1, 4, 6 };
 
-  System.out.println(minDifference(arr));
- }
+        System.out.println(minDifference(arr));
+    }
 }
